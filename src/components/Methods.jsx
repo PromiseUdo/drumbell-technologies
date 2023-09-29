@@ -12,9 +12,9 @@ const Methods = () => {
 
   return (
     <Section
-      subtitle="You Can Acquire Everything"
-      title="Acquire new customers"
-      description="You can acquire everything by following these methods"
+      subtitle="Our Strategy"
+      title="Our 3-Step Strategy"
+      description="We believe in efficiency and maximizing resources to achieve the best results"
       id="methods"
     >
       <div className={styles.container}>
