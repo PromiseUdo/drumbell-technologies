@@ -19,7 +19,7 @@ const Intro = () => {
           </p>
           <div className={styles.actions}>
             <Link href="/" className={styles.customer}>
-              <span>New Customer</span>
+              <span>Our Strategy</span>
               <FaArrowRight />
             </Link>
             <Link href="/" className={styles.contact}>

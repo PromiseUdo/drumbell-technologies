@@ -28,8 +28,11 @@ const Methods = () => {
               setMethod3(false);
             }}
           >
-            <h3>Discover</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <h3>Discover Phase</h3>
+            <p>
+              We start by conducting market research, analyze trends and gather
+              requirements to define the project scope and objectives.
+            </p>
           </button>
           <button
             className={method2 ? styles.active : ""}
@@ -39,8 +42,11 @@ const Methods = () => {
               setMethod3(false);
             }}
           >
-            <h3>Build</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <h3>Build Phase</h3>
+            <p>
+              Where the magic happens. We leverage cutting-edge technologies and
+              industry best practices to deliver high-quality results.
+            </p>
           </button>
           <button
             className={method3 ? styles.active : ""}
@@ -50,8 +56,12 @@ const Methods = () => {
               setMethod1(false);
             }}
           >
-            <h3>Deliver</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <h3>Deliver Phase</h3>
+            <p>
+              We are ready to launch your result. Our commitment extends to
+              offer you ongoing support, training and guide throughout user
+              acceptance
+            </p>
           </button>
           {/* </JackInTheBox> */}
         </div>

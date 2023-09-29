@@ -48,7 +48,7 @@ const Navbar = ({ setMode, mode }) => {
               <Link href="/">About Us</Link>
             </li>
             <li>
-              <Link href="/">Our Method</Link>
+              <Link href="/">Our Strategy</Link>
             </li>
             <li>
               <Link href="/">Services</Link>
