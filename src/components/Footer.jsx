@@ -42,7 +42,7 @@ const Footer = () => {
         {/* <div className={styles.footer_inner}> */}
         <div className={styles.footer_col}>
           <ul>
-            <li className={styles.footer_title}>Products</li>
+            <li className={styles.footer_title}>Our Products</li>
             <li>
               <a target="_blank" href="https://parott.io">
                 Parott.io

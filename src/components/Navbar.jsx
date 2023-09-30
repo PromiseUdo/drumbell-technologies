@@ -55,7 +55,7 @@ const Navbar = ({ setMode, mode }) => {
             </li>
 
             <li>
-              <Link href="/">Products</Link>
+              <Link href="/">Our Products</Link>
             </li>
             <li>
               <Link href="#contact">Contact</Link>
@@ -114,7 +114,7 @@ const Navbar = ({ setMode, mode }) => {
                 <Link href="/">Our Strategy</Link>
               </li>
               <li onClick={() => setIsActive(false)}>
-                <Link href="/">Products</Link>
+                <Link href="/">Our Products</Link>
               </li>
               <li onClick={() => setIsActive(false)}>
                 <Link href="/">Contact</Link>
