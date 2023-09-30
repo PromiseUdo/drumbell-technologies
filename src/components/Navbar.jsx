@@ -104,20 +104,20 @@ const Navbar = ({ setMode, mode }) => {
               {/* Links */}
 
               <li onClick={() => setIsActive(false)}>
-                <Link href="/">About Us</Link>
+                <Link href="#about">About Us</Link>
               </li>
 
               <li onClick={() => setIsActive(false)}>
-                <Link href="/">Services</Link>
+                <Link href="#services">Services</Link>
               </li>
               <li onClick={() => setIsActive(false)}>
-                <Link href="/">Our Strategy</Link>
+                <Link href="#strategy">Our Strategy</Link>
               </li>
               <li onClick={() => setIsActive(false)}>
                 <Link href="/">Our Products</Link>
               </li>
               <li onClick={() => setIsActive(false)}>
-                <Link href="/">Contact</Link>
+                <Link href="#contact">Contact</Link>
               </li>
             </ul>
           )}
