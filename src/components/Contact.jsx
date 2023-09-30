@@ -20,7 +20,7 @@ const Contact = () => {
                 <label htmlFor="name">YOUR NAME</label>
                 <input type="text" id="name" name="name" />
               </div>
-              <div className={styles.inputError}>Name is required</div>
+              <div className={styles.inputError}></div>
             </div>
             {/* Phone */}
             <div className={styles.inputOuter}>
@@ -28,7 +28,7 @@ const Contact = () => {
                 <label htmlFor="phone">PHONE</label>
                 <input type="text" id="phone" name="phone" />
               </div>
-              <div className={styles.inputError}>Phone is required</div>
+              <div className={styles.inputError}></div>
             </div>
           </div>
           {/* Email */}
@@ -37,7 +37,7 @@ const Contact = () => {
               <label htmlFor="email">EMAIL</label>
               <input type="email" id="email" name="email" />
             </div>
-            <div className={styles.inputError}>Email is required</div>
+            <div className={styles.inputError}></div>
           </div>
           {/* Subject */}
           <div className={styles.inputOuter}>
@@ -45,7 +45,7 @@ const Contact = () => {
               <label htmlFor="subject">SUBJECT</label>
               <input type="text" id="subject" name="subject" />
             </div>
-            <div className={styles.inputError}>Subject is required</div>
+            <div className={styles.inputError}></div>
           </div>
           {/* Message */}
           <div className={styles.inputOuter}>
@@ -53,7 +53,7 @@ const Contact = () => {
               <label htmlFor="subject">Message</label>
               <textarea type="text" id="message" name="message"></textarea>
             </div>
-            <div className={styles.inputError}>Message is required</div>
+            <div className={styles.inputError}></div>
           </div>
           <button>
             <span>SEND MESSAGE</span>

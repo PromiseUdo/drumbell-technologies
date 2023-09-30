@@ -102,12 +102,12 @@
     outline: 2px solid transparent;
     border: none;
     border-radius: 50%;
-    background: var(--color-secondary);
+    background: white;
     display: flex;
     padding: 0.7rem;
     cursor: pointer;
     svg {
-      color: white;
+      color: black;
       font-size: 1.15rem;
     }
   }
@@ -115,6 +115,7 @@
     background: rgba(0, 0, 0, 0.9);
     svg {
       transform: translateX(1px);
+      color: white;
     }
   }
 

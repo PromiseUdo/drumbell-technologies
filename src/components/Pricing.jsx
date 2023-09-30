@@ -37,7 +37,7 @@ const Pricing = () => {
           </div>
           <div className={styles.actions}>
             <Link href="/" className={styles.purchase}>
-              Purchase Now
+              Get This Now
             </Link>
             <Link href="/" className={styles.upgrade}>
               Upgrade
