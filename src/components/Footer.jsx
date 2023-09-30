@@ -30,10 +30,8 @@ const Footer = () => {
           <ul>
             <li className={styles.footer_title}>Services</li>
             {Services.map((service, idx) => (
-              <li>
-                <Link href="#services" key={idx}>
-                  {service}
-                </Link>
+              <li key={idx}>
+                <Link href="#services">{service}</Link>
               </li>
             ))}
           </ul>
