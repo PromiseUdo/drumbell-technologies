@@ -12,6 +12,7 @@ import Methods from "@/components/Methods";
 import Pricing from "@/components/Pricing";
 import Clients from "@/components/Clients";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 export default function Home() {
   const [mode, setMode] = useState(true);
   return (
@@ -27,6 +28,7 @@ export default function Home() {
         <Pricing />
         <Clients />
         <Contact />
+        <Footer />
       </main>
     </div>
   );
