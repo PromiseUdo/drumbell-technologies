@@ -36,6 +36,8 @@ const Footer = () => {
             ))}
           </ul>
         </div>
+        {/* </div> */}
+        {/* <div className={styles.footer_inner}> */}
         <div className={styles.footer_col}>
           <ul>
             <li className={styles.footer_title}>Products</li>
