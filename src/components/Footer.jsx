@@ -8,7 +8,7 @@ const Services = [
   "Penetration Testing",
   "Digital Marketing",
 ];
-const Products = ["Parott.io", "Drumbell Org"];
+const Products = ["Parott.io", "Drumbell.org"];
 
 const Footer = () => {
   return (
@@ -30,7 +30,9 @@ const Footer = () => {
           <ul>
             <li className={styles.footer_title}>Services</li>
             {Services.map((service, idx) => (
-              <li key={idx}>{service}</li>
+              <Link href="/" key={idx}>
+                {service}
+              </Link>
             ))}
           </ul>
         </div>
@@ -38,7 +40,9 @@ const Footer = () => {
           <ul>
             <li className={styles.footer_title}>Products</li>
             {Products.map((product, idx) => (
-              <li key={idx}>{product}</li>
+              <Link href="/" key={idx}>
+                {product}
+              </Link>
             ))}
           </ul>
         </div>

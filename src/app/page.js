@@ -13,6 +13,7 @@ import Pricing from "@/components/Pricing";
 import Clients from "@/components/Clients";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import FooterExt from "@/components/FooterExt";
 export default function Home() {
   const [mode, setMode] = useState(true);
   return (
@@ -28,8 +29,9 @@ export default function Home() {
         <Pricing />
         <Clients />
         <Contact />
-        <Footer />
       </main>
+      <Footer />
+      <FooterExt />
     </div>
   );
 }
