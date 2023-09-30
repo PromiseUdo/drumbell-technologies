@@ -7,8 +7,8 @@
   .circle {
     position: relative;
     z-index: 1;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     background: #011827;
     color: var(--color-primary);
     border-radius: 50%;
@@ -29,6 +29,7 @@
     top: 50%;
     left: 50%;
     width: 100%;
+    z-index: 0;
     height: 1px;
     background: var(--color-gray-200);
     transform: translateY(-50%) translateX(50%);

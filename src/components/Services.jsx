@@ -1,13 +1,15 @@
 import { Fade } from "react-awesome-reveal";
 import styles from "../styles/Services.module.scss";
 import Section from "./Section";
+import Image from "next/image";
 
-const Service = ({ line, number, background, color, title, description }) => {
+const Service = ({ line, background, image, title, description }) => {
   return (
     <div className={styles.service}>
       <div className={styles.circle} style={{ background: background }}>
-        <span style={{ color: color }}>{number}</span>
-        {line ? <div className={styles.line}></div> : null}
+        {/* <span style={{ color: color }}>{number}</span> */}
+        <Image objectFit="center" height="50" width="50" src={image} />
+        {/* {line ? <div className={styles.line}></div> : null} */}
       </div>
       <div className={styles.title}>
         <h2>{title}</h2>
@@ -19,9 +21,7 @@ const Service = ({ line, number, background, color, title, description }) => {
 
 Service.defaultProps = {
   line: true,
-  number: 1,
-  color: "var(--color-primary)",
-  background: "var(--color-primary-dark)",
+  background: "var(--color-dark)",
   title: "App Development",
   description: "Web and Mobile Apps to drive your business goals",
 };
@@ -36,26 +36,23 @@ const Services = () => {
     >
       <div className={styles.container}>
         {/* <Fade cascade damping={0.05}> */}
-        <Service number={1} />
+        <Service image="/services/development.png" />
         <Service
-          number={2}
-          background="var(--color-secondary-dark)"
-          color="var(--color-secondary)"
+          // background="var(--color-secondary-dark)"
+          image="/services/cybersecurity.png"
           title="Cyber Security Analysis"
           description="Analysis of your computer networks and provide robust security"
         />
         <Service
-          number={3}
-          background="var(--color-tertiary-dark)"
-          color="var(--color-tertiary)"
+          // background="var(--color-tertiary-dark)"
           title="Penetration Testing"
+          image="/services/penetration.png"
           description="Boots your network security, uncover loopholes in networks"
         />
         <Service
-          number={4}
           line={false}
-          background="var(--color-pink-dark)"
-          color="var(--color-pink)"
+          // background="var(--color-pink-dark)"
+          image="/services/marketing.png"
           title="Digital Marketing"
           description="Reach out your online audience with well-crafted media strategies"
         />
