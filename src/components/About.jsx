@@ -27,13 +27,13 @@ const About = ({ mode }) => {
             Our team of seasoned professionals brings a wealth of experience,
             ensuring that every project we undertake is executed with precision
             and creativity. From cutting-edge app development to robust
-            cybersecurity solutions, we're here to fuel your success in the
+            cybersecurity solutions, we&apos;re here to fuel your success in the
             digital landscape.
           </p>
 
           <p>
             We stand ready to transform your technology challenges into
-            opportunities for growth. Your vision is our mission, and we're
+            opportunities for growth. Your vision is our mission, and we&apos;re
             excited to be your trusted IT solution provider.
           </p>
         </div>
