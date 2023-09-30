@@ -9,7 +9,7 @@ const Contact = () => {
       subtitle="Contact Form"
       title="Let's Do Business Together"
       description="We would like to work with you to make your dreams a reality. Tell us about your next project"
-      id="methods"
+      id="contact"
     >
       <div>
         <form className={styles.contact_form}>

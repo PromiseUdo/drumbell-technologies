@@ -18,11 +18,11 @@ const Intro = () => {
             experiences.
           </p>
           <div className={styles.actions}>
-            <Link href="/" className={styles.customer}>
+            <Link href="#strategy" className={styles.customer}>
               <span>Our Strategy</span>
               <FaArrowRight />
             </Link>
-            <Link href="/" className={styles.contact}>
+            <Link href="#contact" className={styles.contact}>
               <span>Contact Us</span>
               <FaArrowRight />
             </Link>

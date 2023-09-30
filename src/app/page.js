@@ -14,6 +14,7 @@ import Clients from "@/components/Clients";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FooterExt from "@/components/FooterExt";
+import About from "@/components/About";
 export default function Home() {
   const [mode, setMode] = useState(true);
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <GradientCircleTop />
         <GradientCircleMd />
         <Intro />
+        <About mode={mode} />
         <Services />
         <Methods />
         <Pricing />

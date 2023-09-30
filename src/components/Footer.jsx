@@ -30,9 +30,11 @@ const Footer = () => {
           <ul>
             <li className={styles.footer_title}>Services</li>
             {Services.map((service, idx) => (
-              <Link href="/" key={idx}>
-                {service}
-              </Link>
+              <li>
+                <Link href="#services" key={idx}>
+                  {service}
+                </Link>
+              </li>
             ))}
           </ul>
         </div>
@@ -41,11 +43,16 @@ const Footer = () => {
         <div className={styles.footer_col}>
           <ul>
             <li className={styles.footer_title}>Products</li>
-            {Products.map((product, idx) => (
-              <Link href="/" key={idx}>
-                {product}
-              </Link>
-            ))}
+            <li>
+              <a target="_blank" href="https://parott.io">
+                Parott.io
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://drumbell.org">
+                Drumbell Advocacy
+              </a>
+            </li>
           </ul>
         </div>
         <div className={styles.footer_col}>
@@ -54,7 +61,7 @@ const Footer = () => {
             <p>100+ Our clients are subscribed around the world!</p>
           </div>
           <form className={styles.footer_form}>
-            <input type="text" placeholder="Your@email.com" />
+            <input type="email" placeholder="Your@email.com" />
             <span></span>
             <button>Submit Now</button>
           </form>

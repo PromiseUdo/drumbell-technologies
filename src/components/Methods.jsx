@@ -15,7 +15,7 @@ const Methods = () => {
       subtitle="Our Strategy"
       title="Our 3-Step Strategy"
       description="We believe in efficiency and maximizing resources to achieve the best results"
-      id="methods"
+      id="strategy"
     >
       <div className={styles.container}>
         <div className={styles.methods}>
