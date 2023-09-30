@@ -8,7 +8,13 @@ const Service = ({ line, background, image, title, description }) => {
     <div className={styles.service}>
       <div className={styles.circle} style={{ background: background }}>
         {/* <span style={{ color: color }}>{number}</span> */}
-        <Image objectFit="center" height="50" width="50" src={image} />
+        <Image
+          alt="page illustration"
+          objectFit="center"
+          height="50"
+          width="50"
+          src={image}
+        />
         {/* {line ? <div className={styles.line}></div> : null} */}
       </div>
       <div className={styles.title}>

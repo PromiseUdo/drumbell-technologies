@@ -27,6 +27,7 @@ const Client = ({ imgSource, country, comment, name, profession }) => {
       <div className={styles.imgContainer}>
         <div className={styles.inner}>
           <Image
+            alt="clients portraits"
             objectFit="cover"
             layout="responsive"
             src={imgSource}

@@ -29,15 +29,8 @@ const Intro = () => {
           </div>
         </div>
         <div className={styles.illustration}>
-          {/* <Image
-            width="100%"
-            height="100%"
-            objectFit="contain"
-            layout="responsive"
-            src="/intro.svg"
-          /> */}
-
           <Image
+            alt="page illustration"
             objectFit="contain"
             layout="responsive"
             src="/intro.svg"

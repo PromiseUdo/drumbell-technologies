@@ -40,20 +40,14 @@ const About = ({ mode }) => {
         <div className={styles.images} ref={parent}>
           {mode ? (
             <Image
-              //   width="100%"
-              //   height="100%"
-              //   sizes="100vw"
-              //   style={{ width: "100%", height: "auto" }} // optional
+              alt="page illustration"
               objectFit="contain"
               layout="fill"
               src="/solution.png"
             />
           ) : (
             <Image
-              //   width="100%"
-              //   height="100%"
-              //   sizes="100vw"
-              //   style={{ width: "100%", height: "auto" }} // optional
+              alt="page illustration"
               objectFit="contain"
               layout="fill"
               src="/solution_dark.png"

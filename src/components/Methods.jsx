@@ -68,6 +68,7 @@ const Methods = () => {
         <div className={styles.images} ref={parent}>
           {method1 && (
             <Image
+              alt="page illustration"
               //   width="100%"
               //   height="100%"
               //   sizes="100vw"
@@ -79,6 +80,7 @@ const Methods = () => {
           )}
           {method2 && (
             <Image
+              alt="page illustration"
               //   width="100%"
               //   height="100%"
               //   sizes="100vw"
@@ -90,6 +92,7 @@ const Methods = () => {
           )}
           {method3 && (
             <Image
+              alt="page illustration"
               //   width="100%"
               //   height="100%"
               //   sizes="100vw"
