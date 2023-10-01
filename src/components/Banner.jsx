@@ -24,11 +24,11 @@ const Banner = () => {
         <div className={styles.contact}>
           <div className={styles.location}>
             <IoLocationOutline />
-            <span>Abuja, Nigeria</span>
+            <span>United Kingdom</span>
           </div>
           <div className={styles.phone}>
             <BsTelephone />
-            <span>0706 426 6605</span>
+            <span>+44 7899 365494</span>
           </div>
           <div className={styles.socials}>
             <Link href="#">
