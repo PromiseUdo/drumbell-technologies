@@ -54,10 +54,10 @@ const Navbar = ({ setMode, mode }) => {
             <li>
               <Link href="#strategy">Our Strategy</Link>
             </li>
-
+            {/* 
             <li>
               <Link href="#">Our Products</Link>
-            </li>
+            </li> */}
 
             <li>
               <Link href="#contact">Contact</Link>
