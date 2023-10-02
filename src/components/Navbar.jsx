@@ -9,6 +9,7 @@ import useOnClickOutside from "@/hooks/ClickOut";
 const Navbar = ({ setMode, mode }) => {
   const [isActive, setIsActive] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileDropdown, setMobileDropdown] = useState(false);
   const mobileNav = useRef(null);
   useOnClickOutside(mobileNav, () => setIsActive(false));
 
@@ -55,8 +56,9 @@ const Navbar = ({ setMode, mode }) => {
             </li>
 
             <li>
-              <Link href="/">Our Products</Link>
+              <Link href="#">Our Products</Link>
             </li>
+
             <li>
               <Link href="#contact">Contact</Link>
             </li>
@@ -113,9 +115,36 @@ const Navbar = ({ setMode, mode }) => {
               <li onClick={() => setIsActive(false)}>
                 <Link href="#strategy">Our Strategy</Link>
               </li>
-              <li onClick={() => setIsActive(false)}>
-                <Link href="/">Our Products</Link>
+              <li>
+                <span
+                  className={styles.topMenu}
+                  onClick={() => setMobileDropdown(!mobileDropdown)}
+                >
+                  Our Products
+                </span>
               </li>
+              {mobileDropdown && (
+                <>
+                  <li onClick={() => setIsActive(false)}>
+                    <a
+                      className={styles.subMenu}
+                      target="_blank"
+                      href="https://parott.io"
+                    >
+                      Parott.io
+                    </a>
+                  </li>
+                  <li onClick={() => setIsActive(false)}>
+                    <a
+                      className={styles.subMenu}
+                      target="_blank"
+                      href="https://drumbell.org"
+                    >
+                      Drumbell.org
+                    </a>
+                  </li>
+                </>
+              )}
               <li onClick={() => setIsActive(false)}>
                 <Link href="#contact">Contact</Link>
               </li>

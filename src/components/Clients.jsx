@@ -67,15 +67,15 @@ const Clients = () => {
         />
         <Client
           imgSource={"/person2.jpg"}
-          country={"Wales"}
+          country={"Nigeria"}
           profession={"Youtuber"}
-          name={"Patrick West"}
+          name={"Ezra Jemimah"}
         />
         <Client
           imgSource={"/person3.jpg"}
-          country={"Nigeria"}
+          country={"Wales"}
           profession={"Dietician"}
-          name={"Ezra Jemimah"}
+          name={"Patrick West"}
         />
       </Carousel>
     </Section>

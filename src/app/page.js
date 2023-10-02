@@ -15,10 +15,13 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FooterExt from "@/components/FooterExt";
 import About from "@/components/About";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Import the CSS file for styling the ToastContainer.
 export default function Home() {
   const [mode, setMode] = useState(true);
   return (
     <div className={`page  ${!mode && "light"} dark`}>
+      <ToastContainer />
       <Banner />
       <Navbar mode={mode} setMode={setMode} />
       <main className="main">

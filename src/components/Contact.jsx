@@ -1,9 +1,54 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import styles from "../styles/Contact.module.scss";
 import Section from "./Section";
-import { FaArrowRight } from "react-icons/fa";
-
+import { FaArrowRight, FaSpinner } from "react-icons/fa";
+import { toast } from "react-toastify";
+import { BeatLoader } from "react-spinners";
 const Contact = () => {
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [subject, setSubject] = useState();
+  const [message, setMessage] = useState();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleFormSubmt = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    const data = {
+      name,
+      email,
+      subject,
+      message,
+    };
+    const response = await fetch("/api/send-contact-email", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    console.log(response);
+    if (response.ok) {
+      toast.success("Thank you for contacting us!", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+      setIsLoading(false);
+      setName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+    } else {
+      toast.error("Please try again later!", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+      setName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+      setIsLoading(false);
+    }
+  };
   return (
     <Section
       subtitle="Contact Form"
@@ -12,21 +57,20 @@ const Contact = () => {
       id="contact"
     >
       <div>
-        <form className={styles.contact_form}>
+        <form className={styles.contact_form} onSubmit={handleFormSubmt}>
           <div className={styles.contact_name}>
             {/* Name */}
             <div className={styles.inputOuter}>
               <div className={styles.inputContainer}>
                 <label htmlFor="name">YOUR NAME</label>
-                <input type="text" id="name" name="name" />
-              </div>
-              <div className={styles.inputError}></div>
-            </div>
-            {/* Phone */}
-            <div className={styles.inputOuter}>
-              <div className={styles.inputContainer}>
-                <label htmlFor="phone">PHONE</label>
-                <input type="text" id="phone" name="phone" />
+                <input
+                  required
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
               </div>
               <div className={styles.inputError}></div>
             </div>
@@ -35,7 +79,14 @@ const Contact = () => {
           <div className={styles.inputOuter}>
             <div className={styles.inputContainer}>
               <label htmlFor="email">EMAIL</label>
-              <input type="email" id="email" name="email" />
+              <input
+                required
+                type="email"
+                id="email"
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
             <div className={styles.inputError}></div>
           </div>
@@ -43,7 +94,14 @@ const Contact = () => {
           <div className={styles.inputOuter}>
             <div className={styles.inputContainer}>
               <label htmlFor="subject">SUBJECT</label>
-              <input type="text" id="subject" name="subject" />
+              <input
+                required
+                type="text"
+                id="subject"
+                name="subject"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+              />
             </div>
             <div className={styles.inputError}></div>
           </div>
@@ -51,13 +109,26 @@ const Contact = () => {
           <div className={styles.inputOuter}>
             <div className={styles.inputContainer}>
               <label htmlFor="subject">Message</label>
-              <textarea type="text" id="message" name="message"></textarea>
+              <textarea
+                required
+                type="text"
+                id="message"
+                name="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              ></textarea>
             </div>
             <div className={styles.inputError}></div>
           </div>
-          <button>
-            <span>SEND MESSAGE</span>
-            <FaArrowRight />
+          <button type="submit">
+            {isLoading ? (
+              <BeatLoader size={10} loading color="#1e1e1e" />
+            ) : (
+              <>
+                <span>SEND MESSAGE</span>
+                <FaArrowRight />
+              </>
+            )}
           </button>
         </form>
       </div>

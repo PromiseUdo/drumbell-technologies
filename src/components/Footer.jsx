@@ -1,6 +1,8 @@
 import Link from "next/link";
 import styles from "../styles/Footer.module.scss";
-import Section from "./Section";
+import { useState } from "react";
+import { toast } from "react-toastify";
+import { BeatLoader } from "react-spinners";
 
 const Services = [
   "App Development",
@@ -11,6 +13,38 @@ const Services = [
 const Products = ["Parott.io", "Drumbell.org"];
 
 const Footer = () => {
+  const [email, setEmail] = useState();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    const data = {
+      email,
+    };
+    const response = await fetch("/api/newsletter-signup", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    console.log(response);
+    if (response.ok) {
+      toast.success("Successfully subscribed!", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+      setEmail("");
+      setIsLoading(false);
+    } else {
+      setEmail("");
+
+      toast.error("Please try again later!", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+      setIsLoading(false);
+    }
+  };
   return (
     <footer className={styles.footer_outer}>
       <div className={styles.footer_inner}>
@@ -56,12 +90,27 @@ const Footer = () => {
         <div className={styles.footer_col}>
           <div className={styles.footer_newsletter}>
             <h2 className={styles.footer_title}>Newsletter</h2>
-            <p>100+ Our clients are subscribed around the world!</p>
+            <p>100+ Our clients are subscribed!</p>
           </div>
-          <form className={styles.footer_form}>
-            <input type="email" placeholder="Your@email.com" />
+          <form
+            className={styles.footer_form}
+            onSubmit={handleNewsletterSubmit}
+          >
+            <input
+              required
+              type="email"
+              placeholder="Your@email.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
             <span></span>
-            <button>Submit Now</button>
+            <button type="submit">
+              {isLoading ? (
+                <BeatLoader size={10} loading color="#1e1e1e" />
+              ) : (
+                "Subscribe"
+              )}
+            </button>
           </form>
         </div>
       </div>
