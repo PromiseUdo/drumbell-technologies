@@ -75,10 +75,10 @@
   --color-secondary-dark: #190301;
   --color-gradient-1: linear-gradient(
       95deg,
-      var(--color-white) 15%,
-      var(--color-gray-100) 45%,
-      var(--color-white) 75%,
-      var(--color-white) 100%
+      var(--color-primary) 15%,
+      var(--color-tertiary) 45%,
+      var(--color-pink) 75%,
+      var(--color-secondary) 100%
     )
     95%/200% 1000%;
 }
