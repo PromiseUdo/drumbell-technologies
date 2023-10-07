@@ -44,7 +44,7 @@ const PostCard = ({ imgUrl, title, link, description }) => {
         </div>
       </div>
       <div className={styles.cardText}>
-        <h5>{title}</h5>
+        <Link href={link}>{title}</Link>
         <p>{description}</p>
       </div>
     </div>
