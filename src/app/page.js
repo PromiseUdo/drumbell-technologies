@@ -17,6 +17,7 @@ import FooterExt from "@/components/FooterExt";
 import About from "@/components/About";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; // Import the CSS file for styling the ToastContainer.
+import Blogs from "@/components/Blogs";
 export default function Home() {
   const [mode, setMode] = useState(true);
   return (
@@ -25,15 +26,16 @@ export default function Home() {
       <Banner />
       <Navbar mode={mode} setMode={setMode} />
       <main className="main">
-        <GradientCircleTop />
-        <GradientCircleMd />
+        {/* <GradientCircleTop />
+        <GradientCircleMd /> */}
         <Intro />
         <About mode={mode} />
         <Services />
         <Methods />
-        <Pricing />
+        {/* <Pricing /> */}
         <Clients />
         <Contact />
+        <Blogs />
       </main>
       <Footer />
       <FooterExt />
