@@ -33,10 +33,10 @@ export default function Page() {
             alt="cybersecurity image"
           /> */}
           <p>
-            In today's digital age, where information flows seamlessly across
-            networks and data is a prized asset, cybersecurity is not a luxury
-            but a necessity. While large corporations have the resources to
-            invest heavily in cybersecurity, small businesses often find
+            In today&apos;s digital age, where information flows seamlessly
+            across networks and data is a prized asset, cybersecurity is not a
+            luxury but a necessity. While large corporations have the resources
+            to invest heavily in cybersecurity, small businesses often find
             themselves vulnerable to a wide range of cyber threats.
             Cybercriminals see them as lucrative targets precisely because they
             often lack the robust defenses of larger enterprises. Therefore,
@@ -46,11 +46,11 @@ export default function Page() {
           </p>
           <h2 className={styles.heading2}>The Growing Threat Landscape</h2>
           <p>
-            Before delving into the best practices, it's essential to grasp the
-            evolving threat landscape that small businesses face. Cyberattacks
-            are becoming increasingly sophisticated, and even seemingly
-            insignificant data can hold value for malicious actors. Common
-            threats include:
+            Before delving into the best practices, it&apos;s essential to grasp
+            the evolving threat landscape that small businesses face.
+            Cyberattacks are becoming increasingly sophisticated, and even
+            seemingly insignificant data can hold value for malicious actors.
+            Common threats include:
           </p>
 
           <ul>
@@ -61,8 +61,8 @@ export default function Page() {
             </li>
 
             <li>
-              <span>Ransomware: </span>Malware that encrypts a company's data
-              and demands a ransom for decryption.
+              <span>Ransomware: </span>Malware that encrypts a company&apos;s
+              data and demands a ransom for decryption.
             </li>
 
             <li>
