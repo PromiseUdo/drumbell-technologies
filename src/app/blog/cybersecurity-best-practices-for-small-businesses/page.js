@@ -1,5 +1,5 @@
 "use client";
-import styles from "./page.module.scss";
+import styles from "../styles/page.module.scss";
 import Banner from "@/components/Banner";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
@@ -17,7 +17,9 @@ export default function Page() {
       <Banner />
       <Navbar mode={mode} setMode={setMode} />
       <main className="main">
-        <BlogIntro />
+        <BlogIntro
+          title={"Cybersecurity Best Practices for Small Businesses"}
+        />
         <div className={styles.postContainer}>
           <div
             className={styles.postImage}
@@ -32,6 +34,8 @@ export default function Page() {
             src="/cybersecuritybest.jpg"
             alt="cybersecurity image"
           /> */}
+          <h2 className={styles.heading2}>Introduction</h2>
+
           <p>
             In today&apos;s digital age, where information flows seamlessly
             across networks and data is a prized asset, cybersecurity is not a

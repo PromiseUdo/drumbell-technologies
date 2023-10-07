@@ -36,6 +36,9 @@
   }
   ul {
     list-style: disc;
+    span {
+      text-decoration: bold;
+    }
     li {
       margin: 0.5rem 0;
     }

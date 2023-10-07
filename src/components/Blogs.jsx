@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "../styles/Blogs.module.scss";
 import Section from "./Section";
 import { AiOutlineLink } from "react-icons/ai";
@@ -12,14 +13,14 @@ const postsData = [
   },
   {
     id: 2,
-    link: "/",
+    link: "/blog/data-backup-and-disaster-recovery",
     title: "Data Backup and Disaster Recovery",
     description: "",
     image: "/datarecovery.jpg",
   },
   {
     id: 3,
-    link: "/",
+    link: "/blog/embracing-cloud-computing-for-scalability-and-efficiency",
     title: "Embracing Cloud Computing for Scalability and Efficiency",
     description: "",
     image: "/cloudcomputing.jpg",
@@ -37,9 +38,9 @@ const PostCard = ({ imgUrl, title, link, description }) => {
         className={styles.cardInner}
       >
         <div className={styles.overlay}>
-          <a href={link} className={styles.linkWrapper}>
+          <Link href={link} className={styles.linkWrapper}>
             <AiOutlineLink className={styles.linkIcon} />
-          </a>
+          </Link>
         </div>
       </div>
       <div className={styles.cardText}>
@@ -70,9 +71,9 @@ const Blogs = () => {
             />
           ))}
         </div>
-        <a href="/" className={styles.btn}>
+        {/* <a href="/" className={styles.btn}>
           See More
-        </a>
+        </a> */}
       </div>
     </Section>
   );

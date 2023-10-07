@@ -1,25 +1,26 @@
 import Section from "@/components/Section";
 import styles from "../styles/OtherBlogs.module.scss";
 import { AiOutlineLink } from "react-icons/ai";
+import Link from "next/link";
 
 const postsData = [
   {
     id: 1,
     link: "/blog/cybersecurity-best-practices-for-small-businesses",
-    title: " Cybersecurity Best Practices for Small Businesses",
+    title: "Cybersecurity Best Practices for Small Businesses",
     description: "",
     image: "/cybersecuritybest.jpg",
   },
   {
     id: 2,
-    link: "/",
+    link: "/blog/data-backup-and-disaster-recovery",
     title: "Data Backup and Disaster Recovery",
     description: "",
     image: "/datarecovery.jpg",
   },
   {
     id: 3,
-    link: "/",
+    link: "/blog/embracing-cloud-computing-for-scalability-and-efficiency",
     title: "Embracing Cloud Computing for Scalability and Efficiency",
     description: "",
     image: "/cloudcomputing.jpg",
@@ -37,9 +38,9 @@ const PostCard = ({ imgUrl, title, link, description }) => {
         className={styles.cardInner}
       >
         <div className={styles.overlay}>
-          <a href={link} className={styles.linkWrapper}>
+          <Link href={link} className={styles.linkWrapper}>
             <AiOutlineLink className={styles.linkIcon} />
-          </a>
+          </Link>
         </div>
       </div>
       <div className={styles.cardText}>
@@ -70,9 +71,9 @@ const OtherBlogs = () => {
             />
           ))}
         </div>
-        <a href="/" className={styles.btn}>
+        {/* <a href="/" className={styles.btn}>
           See More
-        </a>
+        </a> */}
       </div>
     </Section>
   );
