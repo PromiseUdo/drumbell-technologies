@@ -1,5 +1,5 @@
 .postContainer {
-  color: var(--color-white);
+  color: var(--color-gray-100);
   max-width: 70%;
   display: flex;
   flex-direction: column;
@@ -36,10 +36,11 @@
   }
   ul {
     list-style: disc;
-    span {
-      text-decoration: bold;
-    }
+
     li {
+      span {
+        font-weight: 600;
+      }
       margin: 0.5rem 0;
     }
   }
