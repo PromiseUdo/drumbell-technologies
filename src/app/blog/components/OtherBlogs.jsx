@@ -1,5 +1,5 @@
-import styles from "../styles/Blogs.module.scss";
-import Section from "./Section";
+import Section from "@/components/Section";
+import styles from "../styles/OtherBlogs.module.scss";
 import { AiOutlineLink } from "react-icons/ai";
 
 const postsData = [
@@ -50,11 +50,11 @@ const PostCard = ({ imgUrl, title, link, description }) => {
   );
 };
 
-const Blogs = () => {
+const OtherBlogs = () => {
   return (
     <Section
       subtitle="Blog Posts"
-      title="Our Latest Articles"
+      title="Other Blog Posts"
       description="Subscribe to our newsletter to get notified on when we post our next content"
       id="contact"
     >
@@ -78,4 +78,4 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default OtherBlogs;
